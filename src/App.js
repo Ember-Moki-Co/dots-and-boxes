@@ -3,7 +3,10 @@ import Board from './components/Board'
 
 function App () {
   return (
-    <Board />
+    <>
+      <h1>Testing Hiiiii</h1>
+      <Board />
+    </>
   )
 }
 

@@ -1,17 +1,12 @@
 import React, { useState } from 'react'
 import '../stylesheets/dot.scss'
 
-const Dot = ({ id, claimedBy, handleClick }) => {
-  let playerClaimedBy = 'dot'
-  if (claimedBy) {
-    playerClaimedBy = `${claimedBy}-claimed`
-  }
-
+const Dot = ({ id, x, y }) => {
   return (
     <div
-      onClick={handleClick}
       id={id}
-      className={playerClaimedBy}
+      className='dot'
+      style={{ left: x, top: y }}
     />
   )
 }

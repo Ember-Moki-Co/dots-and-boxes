@@ -1,19 +1,16 @@
 import React, { useState } from "react"
 import "../stylesheets/box.scss"
 import Line from "./Line"
+import Dot from "./Dot"
 
-const Box = ({ id, dots, claimedBy, handleLineClick }) => {
+const Box = ({ dots, lines, handleLineClick }) => {
   return (
     <div className="box">
-      {dots.map((dot, index) => (
-        <Line
-          key={index}
-          id={`line-${id}-${index}`}
-          fromDot={dot}
-          toDot={dots[(index + 1) % dots.length]}
-          claimedBy={claimedBy}
-          handleClick={handleLineClick}
-        />
+      {dots.map((dot) => (
+        <Dot id={dot.id} key={dot.id} x={dot.x} y={dot.y} />
+      ))}
+      {lines.map((line) => (
+        <Line id={line.id} key={line.id} fromDot={line.fromDot} toDot={line.toDot} claimedBy={line.claimedBy} handleClick={handleLineClick} />
       ))}
     </div>
   )
