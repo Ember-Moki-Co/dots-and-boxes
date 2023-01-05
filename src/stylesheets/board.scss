@@ -1,74 +1,10 @@
-// .board {
-//   border: solid 2px red;
-//   height: 85vh;
-//   width: 85vh;
-//   display: grid;
-//   grid-template-columns: repeat(4, 1fr);
-//   grid-template-rows: repeat(4, 1fr);
-//   grid-gap: 5px;
-
-//   .dot {
-//     width: 2rem;
-//     height: 2rem;
-//     background-color: aqua;
-//     border-radius: 50%;
-//     align-self: center;
-//     justify-self: center;
-//   }
-// }
-
 .board {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  border: 1px solid #ccc;
+  border: solid 2px red;
+  height: 85vh;
+  width: 85vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
 
-  .dot {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 1px solid #ccc;
-  }
-
-  .claimed-player1 {
-    background-color: #f00;
-  }
-
-  .claimed-player2 {
-    background-color: #00f;
-  }
-
-  .line {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
-  }
-
-  .claimed-player1 {
-    border-color: #f00;
-  }
-
-  .claimed-player2 {
-    border-color: #00f;
-  }
-
-  .box {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
-
-    &.claimed-player1 {
-      background-color: #faa;
-      border-color: #f00;
-    }
-
-    &.claimed-player2 {
-      background-color: #aaf;
-      border-color: #00f;
-    }
-  }
 }

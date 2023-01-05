@@ -1,16 +1,9 @@
 .dot {
+    display: flex;
     width: 2rem;
     height: 2rem;
     background-color: aqua;
     border-radius: 50%;
     align-self: center;
     justify-self: center;
-    
-  &.player1-claimed {
-    background-color: blue;
-  }
-
-  &.player2-claimed {
-    background-color: red;
-  }
 }
