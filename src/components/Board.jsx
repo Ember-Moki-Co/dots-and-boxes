@@ -38,9 +38,11 @@ const Board = () => {
   return (
     <div className="board">
       <h1>Test</h1>
-      {gameBoard.boxes.map((box) => (
-        <Box key={box.id} id={box.id} dots={box.dots} lines={box.lines} claimedBy={box.claimedBy} handleLineClick={handleLineClick} />
-      ))}
+      {gameBoard.boxes.map((box) => {
+        return (
+          <Box key={box.id} id={box.id} dots={box.dots} lines={box.lines} claimedBy={box.claimedBy} handleLineClick={handleLineClick} />
+        )
+      })}
     </div>
   )
 }
