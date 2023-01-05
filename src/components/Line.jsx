@@ -1,10 +1,15 @@
 import React from "react"
+import "../stylesheets/line.scss"
 
-const Line = ({ id, fromDot, toDot, claimedBy, handleClick }) => {
+const Line = ({ id, fromDot, toDot, claimedBy, vertical, handleClick }) => {
   let className = "line"
 
   if (claimedBy) {
-    className += ` claimed-${claimedBy}`
+    className += `${claimedBy}-claimed`
+  }
+  if (vertical) {
+    console.log(id)
+    className += '-vertical'
   }
 
   return (
