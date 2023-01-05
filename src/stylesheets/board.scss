@@ -3,13 +3,13 @@
   height: 85vh;
   width: 85vh;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 5px;
 
   .dot {
-    display: flex;
-    height: 2rem;
     width: 2rem;
+    height: 2rem;
     background-color: aqua;
     border-radius: 50%;
     align-self: center;

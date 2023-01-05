@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
 import '../stylesheets/dot.scss'
 
-const Dot = (index) => {
-  const [dot, setDot] = useState(null)
-
-  const dotSelected = (e) => {
-    setDot(e.target)
+const Dot = ({ id, claimedBy, handleClick }) => {
+  let playerClaimedBy = 'dot'
+  if (claimedBy) {
+    playerClaimedBy = `${claimedBy}-claimed`
   }
-  console.log(dot)
 
   return (
     <div
-      className='dot'
-      onClick={e => dotSelected(e)}
-      id={dot != null ? 'selected' : undefined}
+      onClick={handleClick}
+      id={id}
+      className={playerClaimedBy}
     />
   )
 }
